@@ -1,0 +1,54 @@
+WHY Mockup & Chunk?
+
+Hmmm, lols @ the easiest answer, well, it makes things simple!
+
+
+Mockup = a base *page-dev-mockup.html file simply loading base assets 
+and displaying the planned columns for page layout start point. Mockup 
+contains links to chunks so as to view each chunk in the page standalone 
+during dev process. Also may contain notes related to such in a card below 
+said display.
+
+Chunk = a base -chunk.html file for code chunks / snippets implemented in 
+page, thus as in chunks, such can be viewed standalone, edited and or 
+re-used elsewhere in projects, thus making using a chunks dev process 
+mindset in theory slightly handy.
+
+
+"/DEV/" Page(s) Dir / File format:
+
+*page = page-name
+*page = /page-name/
+
+- dev/pages/page/assets/
+
+- dev/*page/*page.html
+- dev/*page/*page-dev-mockup.html 
+
+above note: (about: page-dev-mockup.html, this is the base page dev mockup, 
+thus we title it with dev, but we don't need to do so on chunks, 
+though one could do so if so desired.)
+
+-- dev/pages/*page/*page-navbar-guest-chunk.html
+-- dev/pages/*page/*page-navbar-user-chunk.html
+-- dev/pages/*page/*page-header-chunk.html
+-- dev/pages/*page/*page-aside-chunk.html
+-- dev/pages/*page/*page-article-chunk.html
+-- dev/pages/*page/*page-footer-chunk.html
+
+
+NOTE: Yes, of course, we will note that because this is a "DEV" directory 
+and there are plenty of development specific only and or repeats of loading 
+assets directories and or other space related or other such things, this DIR 
+will get large as is to be expected and is only included for development 
+purpose whereas if one was to use such as a dist repo then one would obviously 
+exclude the "/DEV/" dir files and only include the "/DIST/" dir files.
+
+
+"/DIST/" Page(s) Dir / File format:
+
+*page = page-name
+
+- dist/assets/
+
+- dist/*page.html
