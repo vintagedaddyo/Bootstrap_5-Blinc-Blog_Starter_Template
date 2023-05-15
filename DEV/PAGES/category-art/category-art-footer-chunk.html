@@ -1,0 +1,375 @@
+<!doctype html>
+<!-- Bootstrap Color Modes (data-bs-theme="auto") -->
+<html data-bs-theme="auto" lang="en">
+  <!-- // Head -->
+  <head>
+    <!-- Bootstrap Color Modes JS -->
+    <script src="assets/bootstrap/js/color-modes.js"></script> 
+     <!-- Meta -->
+     <!-- Charset -->
+     <meta charset="utf-8">
+     <!-- Viewport -->
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <!-- Description -->
+     <meta name="description" content="">
+     <!-- Author -->
+     <meta name="author" content="Vintagedaddyo, and Bootstrap contributors">
+      
+     <!-- Title -->
+     <title>Category Art · Footer Dev · Bootstrap v5.3</title>
+
+     <!-- // CSS Stylesheets -->
+     <!-- Font Awesome CSS -->
+     <link href="assets/font-awesome/css/all.min.css" rel="stylesheet">
+     <!-- Bootstrap CSS -->
+     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+     <!-- \\ CSS Stylesheets -->	
+
+     <!-- // CSS -->
+     <style>
+        /* Color Modes Toggler Button */
+        .btn-bd-primary {
+          --bd-violet-bg: #712cf9;
+          --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+          --bs-btn-font-weight: 600;
+          --bs-btn-color: var(--bs-white);
+          --bs-btn-bg: var(--bd-violet-bg);
+          --bs-btn-border-color: var(--bd-violet-bg);
+          --bs-btn-hover-color: var(--bs-white);
+          --bs-btn-hover-bg: #6528e0;
+          --bs-btn-hover-border-color: #6528e0;
+          --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+          --bs-btn-active-color: var(--bs-btn-hover-color);
+          --bs-btn-active-bg: #5a23c8;
+          --bs-btn-active-border-color: #5a23c8;
+        }
+        /* Color Modes Toggle */
+        .bd-mode-toggle {
+          z-index: 1500;
+        }
+        /* Content Unset */
+        .dropdown-toggle::after {
+          content: unset;
+        } 
+        @media (prefers-color-scheme: dark) {
+          .dropdown-toggle::after {
+            fill: #666; /* Set icon color for dark mode */
+            opacity: 0.9;
+            content: unset;
+          }
+          path {
+            fill: #666; /* Set icon color for dark mode */
+            opacity: 0.9;
+          }
+        }
+        @media (prefers-color-scheme: light) {
+          .dropdown-toggle::after {
+            fill: #666; /* Set icon color for light mode */
+            opacity: 0.9;
+            content: unset;
+          }
+          path {
+            fill: #666; /* Set icon color for light mode */
+            opacity: 0.9;
+          }
+        }        
+     </style>
+     <!-- \\ CSS -->
+
+  </head>
+  <!-- \\ Head -->
+  <!-- // Body -->
+  <body>
+      <!-- // Bootstrap Color Modes Toggler -->
+      <!-- SVG Icons for color modes toggler -->
+      <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+      <!-- Symbols -->
+         <symbol id="check2" viewBox="0 0 16 16">
+            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+         </symbol>
+         <symbol id="circle-half" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+         </symbol>
+         <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+            <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+            <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+         </symbol>
+         <symbol id="sun-fill" viewBox="0 0 16 16">
+            <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+         </symbol>
+      </svg>
+      <!-- Dropdown Toggler -->
+      <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+         <button class="btn btn-bd-primary bg-body-tertiary py-2 dropdown-toggle d-flex align-items-center"
+            id="bd-theme"
+            type="button"
+            aria-expanded="false"
+            data-bs-toggle="dropdown"
+            aria-label="Toggle theme (auto)">
+            <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+            <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+         </button>
+         <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+            <li>
+               <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                  <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+                  Light
+                 <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+               </button>
+            </li>
+            <li>
+               <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                  <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+                  Dark
+                  <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+               </button>
+            </li>
+            <li>
+               <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
+                  <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#circle-half"></use></svg>
+                  Auto
+                  <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+               </button>
+            </li>
+         </ul>
+      </div>
+      <!-- \\ Bootstrap Color Modes Toggler -->
+
+      <!-- // Nav -->
+      <nav class="navbar">
+         <!-- // Container Fluid -->
+         <div class="container-fluid">
+
+            <!-- // -->
+
+            <!-- \\ -->
+
+         </div>
+         <!-- \\ Container Fluid -->
+      </nav>
+      <!-- \\ Nav -->
+      
+      <!-- // Container -->
+      <div class="container-fluid">       
+         <!-- // Row -->
+         <div class="row">
+
+            <!-- // Col 12 -->
+            <div class="col-md-12">
+               <!-- // Header -->
+               <header>
+
+                  <!-- // -->
+                  
+                  <!-- \\ -->
+
+               </header>
+               <!-- \\ Header -->
+            </div>
+            <!-- \\ Col 12 -->
+
+
+            <!-- // Col 9 -->
+            <div class="col-md-9">
+               <!-- // Article -->
+               <article>
+
+                  <!-- // -->
+                  <br />
+                  <br />
+                  <br />
+                  <br />                  
+                  <!-- \\ -->
+
+               </article>
+               <!-- \\ Article -->
+            </div>
+            <!-- \\ Col 9 -->
+
+
+            <!-- // Col 3 -->
+            <div class="col-md-3">
+               <!-- // Aside -->
+               <aside> 
+
+                  <!-- // -->
+                  <br />
+                  <br />
+                  <br />
+                  <br />                  
+                  <!-- \\ -->
+
+               </aside>
+               <!-- \\ Aside -->
+            </div>
+            <!-- \\ Col 3 -->
+
+
+            <!-- // Col 12 -->
+            <div class="col-md-12">
+               <!-- // Footer -->
+               <footer>
+
+                  <!-- // -->
+
+                  <!-- // ul -->
+                  <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                     <!-- // li -->
+                     <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Home</a></li>
+                     <li class="nav-item dropup">
+                        <a class="nav-link dropdown-toggle text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                           Topics
+                        </a>
+                        <ul class="dropdown-menu">
+                           <li class="small"><a class="dropdown-item" href="category-tech.html"><span class="fa-solid fa-microchip"></span>&nbsp;Technology</a></li>
+                           <li><hr class="dropdown-divider"></li>
+                           <li class="small"><a class="dropdown-item" href="category-art.html"><span class="fa-solid fa-palette"></span>&nbsp;Art</a></li>
+                           <li><hr class="dropdown-divider"></li>
+                           <li class="small"><a class="dropdown-item" href="category-music.html"><span class="fa-solid fa-music"></span>&nbsp;Music</a></li>
+                        </ul>
+                     </li>
+                     <li class="nav-item"><a href="about.html" class="nav-link px-2 text-muted disabled">About</a></li>
+                     <li class="nav-item"><a href="contact.html" class="nav-link px-2 text-muted">Contact</a></li>
+                     <!-- \\ li -->
+                  </ul>
+                  <!-- \\ ul -->
+
+                  <!-- // p -->
+                  <p class="text-center text-muted">
+
+                     <!-- // A trigger modal 3 Credits -->
+                     <a href="#" class="text-muted text-decoration-none" data-bs-toggle="modal" data-bs-target="#creditsModal">&copy;</a>&nbsp;2023 Blog, Inc.&nbsp;<a href="#" class="text-muted" data-bs-toggle="modal" data-bs-target="#termsModal">Terms</a>
+                     <!-- \\ A trigger modal 3 Credits -->
+
+                        <!-- // Modal Credits -->
+                        <div class="modal fade" id="creditsModal"  data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="creditsModalLabel" aria-hidden="true">
+                           <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h1 class="modal-title fs-5 text-uppercase" id="creditsModalLabel"><span class="fa-solid fa-copyright"></span>&nbsp;Credits:</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                 </div>
+                                 <div class="modal-body">
+                                    <!-- // Div Credits -->
+                                    <div id="credits">
+                                       <p class="">
+                                          <span class="">MIT License</span>
+                                       </p>
+                                       <p class="">
+                                          <span class="">Copyright (c) 2023 Vintagedaddyo</span>
+                                       </p>
+                                       <p class="">
+                                          <span class="">Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</span>
+                                       </p>
+                                       <p class="">
+                                          <span class="">The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</span>
+                                       </p>
+                                       <p class="">
+                                          <span class="">THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</span>
+                                       </p>
+                                    </div>
+                                    <!-- \\ Div Credits -->
+                                 </div>
+                                 <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- \\ Modal Credits -->
+
+                        <!-- // Modal Terms -->
+                        <div class="modal fade" id="termsModal"  data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+                           <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h1 class="modal-title fs-5 text-uppercase" id="termsModalLabel"><span class="fa-solid fa-globe"></span>&nbsp;Terms:</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                 </div>
+                                 <div class="modal-body">
+                                    <!-- // Div Terms -->
+                                    <div id="terms">
+                                       <p class="">
+                                          <span class="">Welcome to our website. If you continue to browse and use this website, you are agreeing to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern [business name]’s relationship with you in relation to this website. If you disagree with any part of these terms and conditions, please do not use our website.</span>
+                                       </p>
+                                       <p class="">
+                                          <span class="">The term ‘[Business Name]’ or ‘us’ or ‘we’ refers to the owner of the website whose registered office is [address]. Our company registration number is [company registration number and place of registration]. The term ‘you’ refers to the user or viewer of our website.</span>
+                                       </p>
+                                       <p class="">
+                                          <span class="">The use of this website is subject to the following terms of use:</span>
+                                       </p>
+                                       <ul class="">
+                                          <li class="">
+                                             <span class="">The content of the pages of this website is for your general information and use only. It is subject to change without notice.</span>
+                                          </li>
+                                          <br />
+                                          <li class="">
+                                             <span class="">This website uses cookies to monitor browsing preferences. If you do allow cookies to be used, the following personal information may be stored by us for use by third parties: [insert list of information].</span>
+                                          </li>
+                                          <br />
+                                          <li class="">
+                                             <span class="">Neither we nor any third parties provide any warranty or guarantee as to the accuracy, timeliness, performance, completeness or suitability of the information and materials found or offered on this website for any particular purpose. You acknowledge that such information and materials may contain inaccuracies or errors and we expressly exclude liability for any such inaccuracies or errors to the fullest extent permitted by law.</span>
+                                          </li>
+                                          <br />
+                                          <li class="">
+                                             <span class="">Your use of any information or materials on this website is entirely at your own risk, for which we shall not be liable. It shall be your own responsibility to ensure that any products, services or information available through this website meet your specific requirements.</span>
+                                          </li>
+                                          <br />
+                                          <li class="">
+                                             <span class="">This website contains material which is owned by or licensed to us. This material includes, but is not limited to, the design, layout, look, appearance and graphics. Reproduction is prohibited other than in accordance with the copyright notice, which forms part of these terms and conditions.</span>
+                                          </li>
+                                          <br />
+                                          <li class="">
+                                             <span class="">All trade marks reproduced in this website which are not the property of, or licensed to, the operator are acknowledged on the website.</span>
+                                          </li>
+                                          <br />
+                                          <li class="">
+                                             <span class="">Unauthorised use of this website may give rise to a claim for damages and/or be a criminal offence.</span>
+                                          </li>
+                                          <br />
+                                          <li class="">
+                                             <span class="">From time to time this website may also include links to other websites. These links are provided for your convenience to provide further information. They do not signify that we endorse the website(s). We have no responsibility for the content of the linked website(s).</span>
+                                          </li>
+                                          <br />
+                                          <li class="">
+                                             <span class="">Your use of this website and any dispute arising out of such use of the website is subject to the laws of [Your Country].</span>
+                                          </li>
+                                          <br />
+                                       </ul>
+                                    </div>
+                                    <!-- \\ Div Terms -->
+                                 </div>
+                                 <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><span class="fa-solid fa-close"></span>&nbsp;Close</button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- \\ Modal Terms -->
+                  </p>
+                  <!-- \\ p -->
+                  
+                  <!-- \\ -->
+                  
+               </footer>
+               <!-- \\ Footer -->
+            </div>
+
+            <!-- \\ Col 12 -->        
+
+         </div>
+         <!-- \\ Row -->
+      </div>
+      <!-- \\ Container -->
+      
+     <!-- // JS -->
+     <!-- jQuery JS -->
+     <script src="assets/jquery/js/jquery.min.js"></script>       
+     <!-- Bootstrap JS -->
+     <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+     <!-- \\ JS -->
+     
+  </body>
+  <!-- \\ Body -->
+</html>

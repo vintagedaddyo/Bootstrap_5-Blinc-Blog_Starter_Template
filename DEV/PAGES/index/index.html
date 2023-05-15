@@ -72,7 +72,22 @@
             fill: #666; /* Set icon color for light mode */
             opacity: 0.9;
           }
-        }        
+        }
+
+        /* for top navbar fixed */
+        body {
+            /*padding-top: 74px;*/
+            padding-top: 54px;
+        }
+        /* Switch top dd to up on landscape */
+        @media (max-device-width : 926px) and (orientation : landscape) {
+
+            .drop-switch-up { 
+               bottom: 100% !important; 
+               top: auto !important; 
+            }
+
+         }                
      </style>
      <!-- \\ CSS -->
 
@@ -137,14 +152,140 @@
       <!-- \\ Bootstrap Color Modes Toggler -->
 
       <!-- // Nav -->
-      <nav class="navbar">
+      <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
          <!-- // Container Fluid -->
          <div class="container-fluid">
-
-            <!-- // -->
-
-            <!-- \\ -->
-
+            <!-- // Navbar Brand -->
+            <a class="navbar-brand" href="index.html"><i class="fa-solid fa-globe"></i>&nbsp;Blog</a>
+            <!-- \\ Navbar Brand -->
+            <!-- // Navbar Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <!-- // Navbar Toggler Icon -->
+               <span class="navbar-toggler-icon"></span>
+               <!-- \\ Navbar Toggler Icon -->
+            </button>
+            <!-- \\ Navbar Toggler -->
+            <!-- // Collapse -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <!-- // UL -->
+               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <!-- // Nav Item -->
+                  <li class="nav-item">
+                     <!-- // Nav Link -->
+                     <a class="nav-link active" aria-current="page" href="index.html"><span class="fa-solid fa-home"></span>&nbsp;Home</a>
+                     <!-- \\ Nav Link -->
+                  </li>
+                  <!-- \\ Nav Item -->
+                  <!-- // Nav Item Dropdown -->
+                  <li class="nav-item dropdown">
+                     <!-- // Nav Link Dropdown Toggle -->
+                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="fa-solid fa-comments"></span>&nbsp;Topics
+                     </a>
+                     <!-- \\ Nav Link Dropdown Toggle -->
+                     <!-- // UL Dropdown Menu -->
+                     <ul class="dropdown-menu">
+                        <!-- // Link -->
+                        <li class="small">
+                           <!-- // Dropdown Item -->
+                           <a class="dropdown-item" href="category-tech.html"><span class="fa-solid fa-microchip"></span>&nbsp;Technology</a>
+                           <!-- \\ Dropdown Item -->
+                        </li>
+                        <!-- \\ Link -->
+                        <!-- // Link Dropdown Divider -->
+                        <li><hr class="dropdown-divider"></li>
+                        <!-- \\ Link Dropdown Divider -->
+                        <!-- // Link -->
+                        <li class="small">
+                           <!-- // Dropdown Item -->
+                           <a class="dropdown-item" href="category-art.html"><span class="fa-solid fa-palette"></span>&nbsp;Art</a>
+                           <!-- \\ Dropdown Item -->
+                        </li>
+                        <!-- \\ Link -->
+                        <!-- // Link Dropdown Divider -->
+                        <li><hr class="dropdown-divider"></li>
+                        <!-- \\ Link Dropdown Divider -->
+                        <!-- // Link -->
+                        <li class="small">
+                           <!-- // Dropdown Item -->
+                           <a class="dropdown-item" href="category-music.html"><span class="fa-solid fa-music"></span>&nbsp;Music</a>
+                           <!-- \\ Dropdown Item -->
+                        </li>
+                        <!-- \\ Link -->
+                     </ul>
+                     <!-- \\ UL Dropdown Menu -->
+                  </li>
+                  <!-- \\ Nav Item Dropdown -->
+                  <!-- // Nav Item -->
+                  <li class="nav-item">
+                     <!-- // Nav Link -->
+                     <a class="nav-link disabled" href="about.html"><span class="fa-solid fa-info-circle"></span>&nbsp;About</a>
+                     <!-- \\ Nav Link -->
+                  </li>
+                  <!-- \\ Nav Item -->
+                  <!-- // Nav Item -->
+                  <li class="nav-item">
+                     <!-- // Nav Link -->
+                     <a class="nav-link" href="contact.html"><span class="fa-solid fa-phone"></span>&nbsp;Contact</a>
+                     <!-- \\ Nav Link -->
+                  </li>
+                  <!-- \\ Nav Item -->
+               </ul>
+               <!-- \\ UL -->
+               <!-- // Form -->
+               <form class="d-flex" role="search">
+                  <!-- // Input -->
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <!-- \\ Input -->
+                  <!-- // Button -->
+                  <button class="btn btn-outline-primary" type="submit">Search</button>
+                  <!-- \\ Button -->
+               </form>
+               <!-- \\ Form -->
+               <!-- // btn group -->
+               <div class="btn-group pe-5 p-2">
+                  <!-- // Button -->
+                  <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     <span class="fa-solid fa-user-circle"></span>&nbsp;User Area&nbsp;<span class="fa-solid fa-chevron-down"></span>
+                  </button>
+                  <!-- \\ Button -->
+                  <!-- // UL Dropdown Menu -->
+                  <ul class="dropdown-menu drop-switch-up">
+                     <!-- // Link -->
+                     <li>
+                        <a class="dropdown-item" href="#"><span class="fa-solid fa-user"></span>&nbsp;Profile</a>
+                     </li>
+                     <!-- \\ Link -->
+                     <!-- // Link -->
+                     <li>
+                        <!-- // Dropdown Item -->
+                        <a class="dropdown-item" href="#"><span class="fa-solid fa-cog"></span>&nbsp;Account</a>
+                        <!-- \\ Dropdown Item -->
+                     </li>
+                     <!-- \\ Link -->
+                     <!-- // Link -->      
+                     <li>
+                        <!-- // Dropdown Item -->
+                        <a class="dropdown-item" href="#"><span class="fa-solid fa-screwdriver-wrench"></span>&nbsp;Settings</a>
+                        <!-- \\ Dropdown Item -->
+                     </li>
+                     <!-- \\ Link -->
+                     <!-- // Link Dropdown Divider -->
+                     <li><hr class="dropdown-divider"></li>
+                     <!-- \\ Link Dropdown Divider -->
+                     <!-- // Link -->
+                     <li>
+                        <!-- // Dropdown Item -->
+                        <a class="dropdown-item" href="#"><span class="fa-solid fa-power-off"></span>&nbsp;Logout</a>
+                        <!-- \\ Dropdown Item -->
+                     </li>
+                     <!-- // Link -->
+                  </ul>
+                  <!-- \\ UL Dropdown Menu -->
+               </div>
+               <!-- \\ btn group -->
+            </div>
+            <!-- // collapse -->
          </div>
          <!-- \\ Container Fluid -->
       </nav>
@@ -160,9 +301,18 @@
                <!-- // Header -->
                <header>
 
-                  <!-- // -->
-                  
-                  <!-- \\ -->
+                  <!-- // card -->
+                  <div class="card mt-3 mb-3">
+                     <!-- // div page-breadcrumbs -->
+                     <div id="page-breadcrumbs" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="mt-3 ms-2 me-2">
+                        <ol class="breadcrumb">
+                           <li class="breadcrumb-item"><span class="fa-solid fa-home me-2"></span><a href="index.html">Home</a></li>
+                           <li class="breadcrumb-item active" aria-current="page">Index</li>
+                        </ol>
+                     </div>
+                     <!-- \\ div page-breadcrumbs -->
+                  </div>
+                  <!-- \\ card -->
 
                </header>
                <!-- \\ Header -->
@@ -176,7 +326,14 @@
                <article>
 
                   <!-- // -->
-                  
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />                                     
                   <!-- \\ -->
 
                </article>
@@ -191,7 +348,14 @@
                <aside> 
 
                   <!-- // -->
-                  
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />                                     
                   <!-- \\ -->
 
                </aside>
@@ -206,7 +370,142 @@
                <footer>
 
                   <!-- // -->
-                  
+                  <!-- // ul -->
+                  <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                     <!-- // li -->
+                     <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Home</a></li>
+                     <li class="nav-item dropup">
+                        <a class="nav-link dropdown-toggle text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                           Topics
+                        </a>
+                        <ul class="dropdown-menu">
+                           <li class="small"><a class="dropdown-item" href="category-tech.html"><span class="fa-solid fa-microchip"></span>&nbsp;Technology</a></li>
+                           <li><hr class="dropdown-divider"></li>
+                           <li class="small"><a class="dropdown-item" href="category-art.html"><span class="fa-solid fa-palette"></span>&nbsp;Art</a></li>
+                           <li><hr class="dropdown-divider"></li>
+                           <li class="small"><a class="dropdown-item" href="category-music.html"><span class="fa-solid fa-music"></span>&nbsp;Music</a></li>
+                        </ul>
+                     </li>
+                     <li class="nav-item"><a href="about.html" class="nav-link px-2 text-muted disabled">About</a></li>
+                     <li class="nav-item"><a href="contact.html" class="nav-link px-2 text-muted">Contact</a></li>
+                     <!-- \\ li -->
+                  </ul>
+                  <!-- \\ ul -->
+
+                  <!-- // p -->
+                  <p class="text-center text-muted">
+
+                     <!-- // A trigger modal 3 Credits -->
+                     <a href="#" class="text-muted text-decoration-none" data-bs-toggle="modal" data-bs-target="#creditsModal">&copy;</a>&nbsp;2023 Blog, Inc.&nbsp;<a href="#" class="text-muted" data-bs-toggle="modal" data-bs-target="#termsModal">Terms</a>
+                     <!-- \\ A trigger modal 3 Credits -->
+
+                        <!-- // Modal Credits -->
+                        <div class="modal fade" id="creditsModal"  data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="creditsModalLabel" aria-hidden="true">
+                           <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h1 class="modal-title fs-5 text-uppercase" id="creditsModalLabel"><span class="fa-solid fa-copyright"></span>&nbsp;Credits:</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                 </div>
+                                 <div class="modal-body">
+                                    <!-- // Div Credits -->
+                                    <div id="credits">
+                                       <p class="">
+                                          <span class="">MIT License</span>
+                                       </p>
+                                       <p class="">
+                                          <span class="">Copyright (c) 2023 Vintagedaddyo</span>
+                                       </p>
+                                       <p class="">
+                                          <span class="">Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</span>
+                                       </p>
+                                       <p class="">
+                                          <span class="">The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</span>
+                                       </p>
+                                       <p class="">
+                                          <span class="">THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</span>
+                                       </p>
+                                    </div>
+                                    <!-- \\ Div Credits -->
+                                 </div>
+                                 <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- \\ Modal Credits -->
+
+                        <!-- // Modal Terms -->
+                        <div class="modal fade" id="termsModal"  data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+                           <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h1 class="modal-title fs-5 text-uppercase" id="termsModalLabel"><span class="fa-solid fa-globe"></span>&nbsp;Terms:</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                 </div>
+                                 <div class="modal-body">
+                                    <!-- // Div Terms -->
+                                    <div id="terms">
+                                       <p class="">
+                                          <span class="">Welcome to our website. If you continue to browse and use this website, you are agreeing to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern [business name]’s relationship with you in relation to this website. If you disagree with any part of these terms and conditions, please do not use our website.</span>
+                                       </p>
+                                       <p class="">
+                                          <span class="">The term ‘[Business Name]’ or ‘us’ or ‘we’ refers to the owner of the website whose registered office is [address]. Our company registration number is [company registration number and place of registration]. The term ‘you’ refers to the user or viewer of our website.</span>
+                                       </p>
+                                       <p class="">
+                                          <span class="">The use of this website is subject to the following terms of use:</span>
+                                       </p>
+                                       <ul class="">
+                                          <li class="">
+                                             <span class="">The content of the pages of this website is for your general information and use only. It is subject to change without notice.</span>
+                                          </li>
+                                          <br />
+                                          <li class="">
+                                             <span class="">This website uses cookies to monitor browsing preferences. If you do allow cookies to be used, the following personal information may be stored by us for use by third parties: [insert list of information].</span>
+                                          </li>
+                                          <br />
+                                          <li class="">
+                                             <span class="">Neither we nor any third parties provide any warranty or guarantee as to the accuracy, timeliness, performance, completeness or suitability of the information and materials found or offered on this website for any particular purpose. You acknowledge that such information and materials may contain inaccuracies or errors and we expressly exclude liability for any such inaccuracies or errors to the fullest extent permitted by law.</span>
+                                          </li>
+                                          <br />
+                                          <li class="">
+                                             <span class="">Your use of any information or materials on this website is entirely at your own risk, for which we shall not be liable. It shall be your own responsibility to ensure that any products, services or information available through this website meet your specific requirements.</span>
+                                          </li>
+                                          <br />
+                                          <li class="">
+                                             <span class="">This website contains material which is owned by or licensed to us. This material includes, but is not limited to, the design, layout, look, appearance and graphics. Reproduction is prohibited other than in accordance with the copyright notice, which forms part of these terms and conditions.</span>
+                                          </li>
+                                          <br />
+                                          <li class="">
+                                             <span class="">All trade marks reproduced in this website which are not the property of, or licensed to, the operator are acknowledged on the website.</span>
+                                          </li>
+                                          <br />
+                                          <li class="">
+                                             <span class="">Unauthorised use of this website may give rise to a claim for damages and/or be a criminal offence.</span>
+                                          </li>
+                                          <br />
+                                          <li class="">
+                                             <span class="">From time to time this website may also include links to other websites. These links are provided for your convenience to provide further information. They do not signify that we endorse the website(s). We have no responsibility for the content of the linked website(s).</span>
+                                          </li>
+                                          <br />
+                                          <li class="">
+                                             <span class="">Your use of this website and any dispute arising out of such use of the website is subject to the laws of [Your Country].</span>
+                                          </li>
+                                          <br />
+                                       </ul>
+                                    </div>
+                                    <!-- \\ Div Terms -->
+                                 </div>
+                                 <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><span class="fa-solid fa-close"></span>&nbsp;Close</button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- \\ Modal Terms -->
+                  </p>
+                  <!-- \\ p -->                  
                   <!-- \\ -->
 
                </footer>

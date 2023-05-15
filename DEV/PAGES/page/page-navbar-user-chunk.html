@@ -72,7 +72,23 @@
             fill: #666; /* Set icon color for light mode */
             opacity: 0.9;
           }
-        }        
+        } 
+
+        /* for top navbar fixed */
+        body {
+            padding-top: 74px;
+            /*padding-top: 54px;*/
+        }
+
+        /* Switch top dd to up on landscape */
+        @media (max-device-width : 926px) and (orientation : landscape) {
+
+            .drop-switch-up { 
+               bottom: 100% !important; 
+               top: auto !important; 
+            }
+
+         }               
      </style>
      <!-- \\ CSS -->
 
@@ -137,16 +153,140 @@
       <!-- \\ Bootstrap Color Modes Toggler -->
 
       <!-- // Nav -->
-      <nav class="navbar">
+      <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
          <!-- // Container Fluid -->
          <div class="container-fluid">
-
-            <!-- // -->
-
-            User
-
-            <!-- \\ -->
-
+            <!-- // Navbar Brand -->
+            <a class="navbar-brand" href="index.html"><i class="fa-solid fa-globe"></i>&nbsp;Blog</a>
+            <!-- \\ Navbar Brand -->
+            <!-- // Navbar Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <!-- // Navbar Toggler Icon -->
+               <span class="navbar-toggler-icon"></span>
+               <!-- \\ Navbar Toggler Icon -->
+            </button>
+            <!-- \\ Navbar Toggler -->
+            <!-- // Collapse -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <!-- // UL -->
+               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <!-- // Nav Item -->
+                  <li class="nav-item">
+                     <!-- // Nav Link -->
+                     <a class="nav-link" href="index.html"><span class="fa-solid fa-home"></span>&nbsp;Home</a>
+                     <!-- \\ Nav Link -->
+                  </li>
+                  <!-- \\ Nav Item -->
+                  <!-- // Nav Item Dropdown -->
+                  <li class="nav-item dropdown">
+                     <!-- // Nav Link Dropdown Toggle -->
+                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="fa-solid fa-comments"></span>&nbsp;Topics
+                     </a>
+                     <!-- \\ Nav Link Dropdown Toggle -->
+                     <!-- // UL Dropdown Menu -->
+                     <ul class="dropdown-menu">
+                        <!-- // Link -->
+                        <li class="small">
+                           <!-- // Dropdown Item -->
+                           <a class="dropdown-item" href="category-tech.html"><span class="fa-solid fa-microchip"></span>&nbsp;Technology</a>
+                           <!-- \\ Dropdown Item -->
+                        </li>
+                        <!-- \\ Link -->
+                        <!-- // Link Dropdown Divider -->
+                        <li><hr class="dropdown-divider"></li>
+                        <!-- \\ Link Dropdown Divider -->
+                        <!-- // Link -->
+                        <li class="small">
+                           <!-- // Dropdown Item -->
+                           <a class="dropdown-item" href="category-art.html"><span class="fa-solid fa-palette"></span>&nbsp;Art</a>
+                           <!-- \\ Dropdown Item -->
+                        </li>
+                        <!-- \\ Link -->
+                        <!-- // Link Dropdown Divider -->
+                        <li><hr class="dropdown-divider"></li>
+                        <!-- \\ Link Dropdown Divider -->
+                        <!-- // Link -->
+                        <li class="small">
+                           <!-- // Dropdown Item -->
+                           <a class="dropdown-item" href="category-music.html"><span class="fa-solid fa-music"></span>&nbsp;Music</a>
+                           <!-- \\ Dropdown Item -->
+                        </li>
+                        <!-- \\ Link -->
+                     </ul>
+                     <!-- \\ UL Dropdown Menu -->
+                  </li>
+                  <!-- \\ Nav Item Dropdown -->
+                  <!-- // Nav Item -->
+                  <li class="nav-item">
+                     <!-- // Nav Link -->
+                     <a class="nav-link disabled" href="about.html"><span class="fa-solid fa-info-circle"></span>&nbsp;About</a>
+                     <!-- \\ Nav Link -->
+                  </li>
+                  <!-- \\ Nav Item -->
+                  <!-- // Nav Item -->
+                  <li class="nav-item">
+                     <!-- // Nav Link -->
+                     <a class="nav-link" href="contact.html"><span class="fa-solid fa-phone"></span>&nbsp;Contact</a>
+                     <!-- \\ Nav Link -->
+                  </li>
+                  <!-- \\ Nav Item -->
+               </ul>
+               <!-- \\ UL -->
+               <!-- // Form -->
+               <form class="d-flex" role="search">
+                  <!-- // Input -->
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <!-- \\ Input -->
+                  <!-- // Button -->
+                  <button class="btn btn-outline-primary" type="submit">Search</button>
+                  <!-- \\ Button -->
+               </form>
+               <!-- \\ Form -->
+               <!-- // btn group -->
+               <div class="btn-group pe-5 p-2">
+                  <!-- // Button -->
+                  <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     <span class="fa-solid fa-user-circle"></span>&nbsp;User Area&nbsp;<span class="fa-solid fa-chevron-down"></span>
+                  </button>
+                  <!-- \\ Button -->
+                  <!-- // UL Dropdown Menu -->
+                  <ul class="dropdown-menu drop-switch-up">
+                     <!-- // Link -->
+                     <li>
+                        <a class="dropdown-item" href="#"><span class="fa-solid fa-user"></span>&nbsp;Profile</a>
+                     </li>
+                     <!-- \\ Link -->
+                     <!-- // Link -->
+                     <li>
+                        <!-- // Dropdown Item -->
+                        <a class="dropdown-item" href="#"><span class="fa-solid fa-cog"></span>&nbsp;Account</a>
+                        <!-- \\ Dropdown Item -->
+                     </li>
+                     <!-- \\ Link -->
+                     <!-- // Link -->      
+                     <li>
+                        <!-- // Dropdown Item -->
+                        <a class="dropdown-item" href="#"><span class="fa-solid fa-screwdriver-wrench"></span>&nbsp;Settings</a>
+                        <!-- \\ Dropdown Item -->
+                     </li>
+                     <!-- \\ Link -->
+                     <!-- // Link Dropdown Divider -->
+                     <li><hr class="dropdown-divider"></li>
+                     <!-- \\ Link Dropdown Divider -->
+                     <!-- // Link -->
+                     <li>
+                        <!-- // Dropdown Item -->
+                        <a class="dropdown-item" href="#"><span class="fa-solid fa-power-off"></span>&nbsp;Logout</a>
+                        <!-- \\ Dropdown Item -->
+                     </li>
+                     <!-- // Link -->
+                  </ul>
+                  <!-- \\ UL Dropdown Menu -->
+               </div>
+               <!-- \\ btn group -->
+            </div>
+            <!-- // collapse -->
          </div>
          <!-- \\ Container Fluid -->
       </nav>
