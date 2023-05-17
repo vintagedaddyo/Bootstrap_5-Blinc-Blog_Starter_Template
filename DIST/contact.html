@@ -17,7 +17,7 @@
 
      <!-- Favicon-->
      <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-           
+                 
      <!-- Title -->
      <title>Contact · Dist · Bootstrap v5.3</title>
 
@@ -323,7 +323,6 @@
             </div>
             <!-- \\ Col 12 -->
 
-
             <!-- // Col 8 -->
             <div class="col-md-8">
                <!-- // Article -->
@@ -336,15 +335,58 @@
                      <!-- \\ h4 -->                     
                      <!-- // card body -->
                      <div class="card-body">
+
                         <!-- // alert -->
                         <div class="alert alert-light" role="alert">
-                           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada. Leo integer malesuada nunc vel risus commodo viverra maecenas.
+                           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </div>
                         <!-- \\ alert -->
 
+                        <!-- // card text -->
                         <p class="card-text"></p>
+                        <!-- \\ card text -->
 
-                        Form Contents
+                        <!-- // form -->
+                        <form id="contact-form">
+
+                          <!-- // Full Name -->
+
+                          <div class="mb-3">
+                            <label for="contactInputFullName" class="form-label">Your Full Name:&nbsp;</label>
+                            <input type="text" class="form-control bg-body-tertiary" id="contactInputFullName" aria-describedby="fullnameHelp" placeholder="First & Last Name">
+                            <div id="fullnamelHelp" class="form-text text-danger"><span class="text-muted fw-bold">Note:</span>&nbsp;We'll never share your name with anyone else.</div>
+                          </div>
+
+                          <!-- \\ Full Name -->
+
+                          <!-- //  Email -->
+
+                          <div class="mb-3">
+                            <label for="contactInputEmail" class="form-label">Your Email Address:&nbsp;</label>
+                            <input type="email" class="form-control bg-body-tertiary" id="contactInputEmail" aria-describedby="emailHelp" placeholder="email@example.com">
+                            <div id="emailHelp" class="form-text text-danger"><span class="text-muted fw-bold">Note:</span>&nbsp;We'll never share your email with anyone else.</div>
+                          </div>
+
+                          <!-- \\  Email -->
+
+                          <!-- // Message Textarea -->
+
+                          <div class="mb-3">
+                            <label for="contactInputTextarea" class="form-label">Your Message:&nbsp;</label>
+                            <textarea class="form-control bg-body-tertiary" aria-label="With textarea" id="contactInputTextarea" placeholder="Ah, go on, send us a message!"></textarea>
+                          </div>
+
+                          <!-- \\ Message Textarea -->
+
+                          <!-- // Buttons -->
+
+                          <button type="submit" class="btn btn-primary">Send&nbsp;<span class="fa-solid fa-chevron-right"></span></button>
+                          <button type="reset" class="btn btn-secondary">Reset&nbsp;<span class="fa-solid fa-refresh"></span></button>
+
+                          <!-- // Buttons -->
+
+                        </form>
+                        <!-- \\ form -->
 
                      </div>
                      <!-- \\ card body -->
