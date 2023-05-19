@@ -1,0 +1,20 @@
+/* for top navbar fixed */
+body {
+    padding-top: 74px;
+    /*padding-top: 54px;*/
+}
+
+/* Switch top navbar dd to up on landscape */
+@media (max-device-width : 926px) and (orientation : landscape) {
+
+    .drop-switch-up { 
+        bottom: 100% !important; 
+        top: auto !important; 
+    }
+
+} 
+
+/* Nav Pills nav link active */
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    background-color: var(--bs-nav-pills-link-active-bg) !important;
+}

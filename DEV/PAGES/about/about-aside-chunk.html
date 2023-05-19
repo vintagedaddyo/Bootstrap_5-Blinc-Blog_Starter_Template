@@ -23,56 +23,17 @@
      <link href="assets/font-awesome/css/all.min.css" rel="stylesheet">
      <!-- Bootstrap CSS -->
      <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+     <!-- Bootstrap Color Modes Toggler -->
+     <link href="css/color-modes-toggler.css" rel="stylesheet">
+     <!-- Color Modes Styles -->
+     <link href="css/color-modes-styles.css" rel="stylesheet">
+     <!-- Styles -->
+     <link href="css/styles.css" rel="stylesheet">      
      <!-- \\ CSS Stylesheets -->	
 
      <!-- // CSS -->
      <style>
-        /* Color Modes Toggler Button */
-        .btn-bd-primary {
-          --bd-violet-bg: #712cf9;
-          --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-          --bs-btn-font-weight: 600;
-          --bs-btn-color: var(--bs-white);
-          --bs-btn-bg: var(--bd-violet-bg);
-          --bs-btn-border-color: var(--bd-violet-bg);
-          --bs-btn-hover-color: var(--bs-white);
-          --bs-btn-hover-bg: #6528e0;
-          --bs-btn-hover-border-color: #6528e0;
-          --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-          --bs-btn-active-color: var(--bs-btn-hover-color);
-          --bs-btn-active-bg: #5a23c8;
-          --bs-btn-active-border-color: #5a23c8;
-        }
-        /* Color Modes Toggle */
-        .bd-mode-toggle {
-          z-index: 1500;
-        }
-        /* Content Unset */
-        .dropdown-toggle::after {
-          content: unset;
-        } 
-        @media (prefers-color-scheme: dark) {
-          .dropdown-toggle::after {
-            fill: #666; /* Set icon color for dark mode */
-            opacity: 0.9;
-            content: unset;
-          }
-          path {
-            fill: #666; /* Set icon color for dark mode */
-            opacity: 0.9;
-          }
-        }
-        @media (prefers-color-scheme: light) {
-          .dropdown-toggle::after {
-            fill: #666; /* Set icon color for light mode */
-            opacity: 0.9;
-            content: unset;
-          }
-          path {
-            fill: #666; /* Set icon color for light mode */
-            opacity: 0.9;
-          }
-        }        
+       
      </style>
      <!-- \\ CSS -->
 
@@ -178,13 +139,13 @@
                   <div class="d-flex flex-column flex-md-row align-items-start">
                      <div class="nav nav-pills flex-column w-100 w-md-auto me-3 mb-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 
-                     <button class="bg-body-tertiary mb-2 nav-link active" id="v-pills-about-1-tab" data-bs-toggle="pill" data-bs-target="#v-pills-about-1" type="button" role="tab" aria-controls="v-pills-about-1" aria-selected="true">About 1</button>
+                     <button class="btn-nav-pills-color-modes mb-2 nav-link active" id="v-pills-about-1-tab" data-bs-toggle="pill" data-bs-target="#v-pills-about-1" type="button" role="tab" aria-controls="v-pills-about-1" aria-selected="true">About 1</button>
                   
-                     <button class="bg-body-tertiary mb-2 nav-link" id="v-pills-about-2-tab" data-bs-toggle="pill" data-bs-target="#v-pills-about-2" type="button" role="tab" aria-controls="v-pills-about-2" aria-selected="false">About 2</button>
+                     <button class="btn-nav-pills-color-modes mb-2 nav-link" id="v-pills-about-2-tab" data-bs-toggle="pill" data-bs-target="#v-pills-about-2" type="button" role="tab" aria-controls="v-pills-about-2" aria-selected="false">About 2</button>
 
-                     <button class="btn-light bg-body-tertiary mb-2 nav-link" id="v-pills-about-3-tab" data-bs-toggle="pill" data-bs-target="#v-pills-about-3" type="button" role="tab" aria-controls="v-pills-about-3" aria-selected="false">About 3</button>
+                     <button class="btn-nav-pills-color-modes bg-body-tertiary mb-2 nav-link" id="v-pills-about-3-tab" data-bs-toggle="pill" data-bs-target="#v-pills-about-3" type="button" role="tab" aria-controls="v-pills-about-3" aria-selected="false">About 3</button>
 
-                     <button class="bg-body-tertiary mb-2 nav-link" id="v-pills-about-4-tab" data-bs-toggle="pill" data-bs-target="#v-pills-about-4" type="button" role="tab" aria-controls="v-pills-about-4" aria-selected="false">About 4</button>
+                     <button class="btn-nav-pills-color-modes mb-2 nav-link" id="v-pills-about-4-tab" data-bs-toggle="pill" data-bs-target="#v-pills-about-4" type="button" role="tab" aria-controls="v-pills-about-4" aria-selected="false">About 4</button>
                   </div>
                   <!-- \\  -->
 
@@ -232,6 +193,8 @@
      <script src="assets/jquery/js/jquery.min.js"></script>       
      <!-- Bootstrap JS -->
      <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+     <!-- Scripts JS -->
+     <script src="js/scripts.js"></script>     
      <!-- \\ JS -->
      
   </body>
