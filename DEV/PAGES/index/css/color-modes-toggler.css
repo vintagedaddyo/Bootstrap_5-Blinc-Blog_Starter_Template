@@ -1,0 +1,52 @@
+/* Color Modes Toggler Button */
+.btn-bd-primary {
+  --bd-violet-bg: #712cf9;
+  --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+  --bs-btn-font-weight: 600;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: var(--bd-violet-bg);
+  --bs-btn-border-color: var(--bd-violet-bg);
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: #6528e0;
+  --bs-btn-hover-border-color: #6528e0;
+  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: #5a23c8;
+  --bs-btn-active-border-color: #5a23c8;
+  }
+        
+/* Color Modes Toggle */
+.bd-mode-toggle {
+  z-index: 1500;
+}
+
+/* Content Unset */
+.dropdown-toggle::after {
+  content: unset;
+}
+
+/* Prefers Color Scheme Light */
+@media (prefers-color-scheme: light) {
+  .dropdown-toggle::after {
+    fill: #666; /* Set icon color for light mode */
+    opacity: 0.9;
+    content: unset;
+  }
+  path {
+    fill: #666; /* Set icon color for light mode */
+    opacity: 0.9;
+  }
+} 
+
+/* Prefers Color Scheme Dark */
+@media (prefers-color-scheme: dark) {
+  .dropdown-toggle::after {
+    fill: #666; /* Set icon color for dark mode */
+    opacity: 0.9;
+    content: unset;
+  }
+  path {
+    fill: #666; /* Set icon color for dark mode */
+    opacity: 0.9;
+  }
+}
